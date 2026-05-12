@@ -32,6 +32,8 @@ class StoreStock extends ChangeNotifier {
     _loadStock();
   }
 
+  double? get fsWeight => null;
+
   void _loadStock() async {
     final String jsonString =
         await rootBundle.loadString('assets/items/store_items.json');
@@ -58,6 +60,12 @@ class StoreStock extends ChangeNotifier {
   void decreaseQuantity(StoreItem item) {
     if (item.quantity > 0) {
       _updateItem(item.copyWith(quantity: item.quantity - 1));
+    }
+  }
+
+  void updateQuantity(StoreItem item, int quantity) {
+    if (item.quantity >= 0) {
+      _updateItem(item.copyWith(quantity: quantity));
     }
   }
 

@@ -27,6 +27,7 @@ class ItemList extends StatelessWidget {
           onFavouriteToggled: (StoreItem value) {},
           onQuantityIncreased: (StoreItem value) {},
           onQuantityDecreased: (StoreItem value) {},
+          onQuantityChanged: (StoreItem value, int quantity) {},
           onAddToCart: (StoreItem value) {},
         );
       },

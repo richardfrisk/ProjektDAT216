@@ -109,6 +109,8 @@ class CategoryPage extends StatelessWidget {
                               stock.increaseQuantity(i),
                           onQuantityDecreased: (i) =>
                               stock.decreaseQuantity(i),
+                          onQuantityChanged: (i, qty) => 
+                              stock.updateQuantity(i, qty),
                           onAddToCart: (i) => stock.addToCart(i),
                         );
                       },

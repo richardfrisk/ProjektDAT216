@@ -3,7 +3,7 @@
     {
       "id": "v001",
       "name": "Vine Tomatoes",
-      "category": "Vegetables",
+      "category": "Grönsaker",
       "weight": "500g",
       "price": 29,
       "oldPrice": 35,
@@ -19,7 +19,7 @@
     {
       "id": "v002",
       "name": "Broccoli",
-      "category": "Vegetables",
+      "category": "Grönsaker",
       "weight": "400g",
       "price": 15,
       "oldPrice": null,
@@ -35,7 +35,7 @@
     {
       "id": "v003",
       "name": "Carrots",
-      "category": "Vegetables",
+      "category": "Grönsaker",
       "weight": "1kg",
       "price": 10,
       "oldPrice": null,
@@ -51,7 +51,7 @@
     {
       "id": "v004",
       "name": "Baby Spinach",
-      "category": "Vegetables",
+      "category": "Grönsaker",
       "weight": "200g",
       "price": 18,
       "oldPrice": null,
@@ -67,7 +67,7 @@
     {
       "id": "v005",
       "name": "White Potatoes",
-      "category": "Vegetables",
+      "category": "Grönsaker",
       "weight": "2kg",
       "price": 17.5,
       "oldPrice": 25,
@@ -84,7 +84,7 @@
     {
       "id": "f001",
       "name": "Bananas",
-      "category": "Fruit",
+      "category": "Frukt",
       "weight": "5 pack",
       "price": 12,
       "oldPrice": null,
@@ -100,7 +100,7 @@
     {
       "id": "f002",
       "name": "Gala Apples",
-      "category": "Fruit",
+      "category": "Frukt",
       "weight": "6 pack",
       "price": 20,
       "oldPrice": 30,
@@ -116,7 +116,7 @@
     {
       "id": "f003",
       "name": "Strawberries",
-      "category": "Fruit",
+      "category": "Frukt",
       "weight": "400g",
       "price": 35,
       "oldPrice": null,
@@ -132,7 +132,7 @@
     {
       "id": "f004",
       "name": "Seedless Grapes",
-      "category": "Fruit",
+      "category": "Frukt",
       "weight": "500g",
       "price": 25,
       "oldPrice": null,
@@ -148,7 +148,7 @@
     {
       "id": "f005",
       "name": "Blueberries",
-      "category": "Fruit",
+      "category": "Frukt",
       "weight": "150g",
       "price": 23,
       "oldPrice": 30,
@@ -165,7 +165,7 @@
     {
       "id": "d001",
       "name": "Full Fat Milk",
-      "category": "Dairy",
+      "category": "Mejeri",
       "weight": "2 litres",
       "price": 15,
       "oldPrice": null,
@@ -181,7 +181,7 @@
     {
       "id": "d002",
       "name": "Greek Yoghurt",
-      "category": "Dairy",
+      "category": "Mejeri",
       "weight": "500g",
       "price": 25,
       "oldPrice": null,
@@ -197,7 +197,7 @@
     {
       "id": "d003",
       "name": "Cheddar Cheese",
-      "category": "Dairy",
+      "category": "Mejeri",
       "weight": "400g",
       "price": 30,
       "oldPrice": 38,
@@ -213,7 +213,7 @@
     {
       "id": "d004",
       "name": "Free Range Eggs",
-      "category": "Dairy",
+      "category": "Mejeri",
       "weight": "12 pack",
       "price": 33,
       "oldPrice": null,
@@ -229,7 +229,7 @@
     {
       "id": "d005",
       "name": "Salted Butter",
-      "category": "Dairy",
+      "category": "Mejeri",
       "weight": "250g",
       "price": 18,
       "oldPrice": null,
@@ -246,7 +246,7 @@
     {
       "id": "b001",
       "name": "Sourdough Loaf",
-      "category": "Bakery",
+      "category": "Bakverk",
       "weight": "800g",
       "price": 34,
       "oldPrice": null,
@@ -262,7 +262,7 @@
     {
       "id": "b002",
       "name": "Wholemeal Bread",
-      "category": "Bakery",
+      "category": "Bakverk",
       "weight": "800g",
       "price": 14,
       "oldPrice": null,
@@ -278,7 +278,7 @@
     {
       "id": "b003",
       "name": "Croissants",
-      "category": "Bakery",
+      "category": "Bakverk",
       "weight": "4 pack",
       "price": 27.5,
       "oldPrice": 33,
@@ -295,7 +295,7 @@
     {
       "id": "m001",
       "name": "Chicken Breast",
-      "category": "Meat & Fish",
+      "category": "Kött & Fisk",
       "weight": "600g",
       "price": 40,
       "oldPrice": 60,
@@ -311,7 +311,7 @@
     {
       "id": "m002",
       "name": "Salmon Fillets",
-      "category": "Meat & Fish",
+      "category": "Kött & Fisk",
       "weight": "400g",
       "price": 60,
       "oldPrice": null,
@@ -327,7 +327,7 @@
     {
       "id": "m003",
       "name": "Beef Mince",
-      "category": "Meat & Fish",
+      "category": "Kött & Fisk",
       "weight": "500g",
       "price": 40,
       "oldPrice": null,
@@ -344,7 +344,7 @@
     {
       "id": "p001",
       "name": "Penne Pasta",
-      "category": "Pantry",
+      "category": "Skafferi",
       "weight": "500g",
       "price": 6,
       "oldPrice": null,
@@ -360,7 +360,7 @@
     {
       "id": "p002",
       "name": "Basmati Rice",
-      "category": "Pantry",
+      "category": "Skafferi",
       "weight": "1kg",
       "price": 17.5,
       "oldPrice": null,
@@ -376,7 +376,7 @@
     {
       "id": "p003",
       "name": "Olive Oil",
-      "category": "Pantry",
+      "category": "Skafferi",
       "weight": "500ml",
       "price": 45,
       "oldPrice": 55,
@@ -392,7 +392,7 @@
     {
       "id": "p004",
       "name": "Chopped Tomatoes",
-      "category": "Pantry",
+      "category": "Skafferi",
       "weight": "400g",
       "price": 8,
       "oldPrice": null,
@@ -409,7 +409,7 @@
     {
       "id": "dr001",
       "name": "Orange Juice",
-      "category": "Drinks",
+      "category": "Dryck",
       "weight": "1 litre",
       "price": 25,
       "oldPrice": null,
@@ -425,7 +425,7 @@
     {
       "id": "dr002",
       "name": "Sparkling Water",
-      "category": "Drinks",
+      "category": "Dryck",
       "weight": "1.5 litres",
       "price": 12,
       "oldPrice": null,
@@ -441,7 +441,7 @@
     {
       "id": "dr003",
       "name": "Chamomile Tea",
-      "category": "Drinks",
+      "category": "Dryck",
       "weight": "20 bags",
       "price": 23,
       "oldPrice": null,

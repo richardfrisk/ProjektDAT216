@@ -16,19 +16,19 @@ class _CategoryInfo {
 }
 
 const List<_CategoryInfo> _categories = [
-  _CategoryInfo('Dairy', Icons.water_drop_rounded, Color(0xFF3B82F6),
+  _CategoryInfo('Mejeri', Icons.water_drop_rounded, Color(0xFF3B82F6),
       Color(0xFFDBEAFE)),
-  _CategoryInfo('Fruit', Icons.apple_rounded, Color(0xFF22C55E),
+  _CategoryInfo('Frukt', Icons.apple_rounded, Color(0xFF22C55E),
       Color(0xFFDCFCE7)),
-  _CategoryInfo('Vegetables', Icons.eco_rounded, Color(0xFF16A34A),
+  _CategoryInfo('Grönsaker', Icons.eco_rounded, Color(0xFF16A34A),
       Color(0xFFDCFCE7)),
-  _CategoryInfo('Meat & Fish', Icons.kebab_dining_rounded, Color(0xFFEF4444),
+  _CategoryInfo('Kött & Fisk', Icons.kebab_dining_rounded, Color(0xFFEF4444),
       Color(0xFFFEE2E2)),
-  _CategoryInfo('Bakery', Icons.breakfast_dining_rounded, Color(0xFFF97316),
+  _CategoryInfo('Bakverk', Icons.breakfast_dining_rounded, Color(0xFFF97316),
       Color(0xFFFFEDD5)),
-  _CategoryInfo('Pantry', Icons.kitchen_rounded, Color(0xFF8B5CF6),
+  _CategoryInfo('Skafferi', Icons.kitchen_rounded, Color(0xFF8B5CF6),
       Color(0xFFEDE9FE)),
-  _CategoryInfo('Drinks', Icons.local_drink_rounded, Color(0xFF06B6D4),
+  _CategoryInfo('Dryck', Icons.local_drink_rounded, Color(0xFF06B6D4),
       Color(0xFFCFFAFE)),
 ];
 

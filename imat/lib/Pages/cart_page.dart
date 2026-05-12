@@ -170,7 +170,6 @@ class _CartItemRow extends StatelessWidget {
     );
   }
 }
-
 class _Stepper extends StatelessWidget {
   final StoreItem item;
   final StoreStock stock;

@@ -6,7 +6,10 @@ class StoreItemCard extends StatelessWidget {
   final ValueChanged<StoreItem> onFavouriteToggled;
   final ValueChanged<StoreItem> onQuantityIncreased;
   final ValueChanged<StoreItem> onQuantityDecreased;
+  //final ValueChanged<StoreItem> onQuantityChanged;
   final ValueChanged<StoreItem> onAddToCart;
+
+  final void Function(StoreItem, int) onQuantityChanged;
 
   const StoreItemCard({
     super.key,
@@ -14,6 +17,7 @@ class StoreItemCard extends StatelessWidget {
     required this.onFavouriteToggled,
     required this.onQuantityIncreased,
     required this.onQuantityDecreased,
+    required this.onQuantityChanged,
     required this.onAddToCart,
   });
 
@@ -53,6 +57,7 @@ class StoreItemCard extends StatelessWidget {
         final badgePadV  =  3.0 * scale;
         final fsBadge    = 10.0 * scale;
         final cartHeight = 40.0 * scale;
+
 
         // ── Helpers ────────────────────────────────────────────────────────
 
@@ -97,54 +102,74 @@ class StoreItemCard extends StatelessWidget {
         }
 
         Widget buildQtyStepper() {
+          final controller = TextEditingController(
+            text: item.quantity.toString(),
+          );
+
           return Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.black26),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // − button
-                Semantics(
-                  label: 'Decrease quantity',
-                  button: true,
-                  child: InkWell(
-                    onTap: () => onQuantityDecreased(item),
-                    borderRadius: BorderRadius.circular(8),
-                    child: Padding(
-                      padding: EdgeInsets.all(stepperPad),
-                      child: Icon(Icons.remove, size: stepperIcon),
-                    ),
+            border: Border.all(color: Colors.black26),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // − button
+              Semantics(
+                label: 'Decrease quantity',
+                button: true,
+                child: InkWell(
+                  onTap: () => onQuantityDecreased(item),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: EdgeInsets.all(stepperPad),
+                    child: Icon(Icons.remove, size: stepperIcon),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: stepperHPad),
-                  child: Text(
-                    '${item.quantity}',
-                    style: TextStyle(
-                      fontSize: fsWeight,
-                      fontWeight: FontWeight.w600,
-                    ),
+              ),
+
+              SizedBox(
+                width: w * 0.7,
+                child: TextField(
+                  controller: controller,
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    isDense: true,
+                  ),
+                  style: TextStyle(
+                    fontSize: fsWeight,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  onSubmitted: (value) {
+                    final qty = int.tryParse(value);
+
+                    if (qty != null && qty >= 0) {
+                      onQuantityChanged(item, qty);
+                    } else {
+                      controller.text = item.quantity.toString();
+                    }
+                  },
+                ),
+              ),
+              // + button
+              Semantics(
+                label: 'Increase quantity',
+                button: true,
+                child: InkWell(
+                  onTap: () => onQuantityIncreased(item),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: EdgeInsets.all(stepperPad),
+                    child: Icon(Icons.add, size: stepperIcon),
                   ),
                 ),
-                // + button
-                Semantics(
-                  label: 'Increase quantity',
-                  button: true,
-                  child: InkWell(
-                    onTap: () => onQuantityIncreased(item),
-                    borderRadius: BorderRadius.circular(8),
-                    child: Padding(
-                      padding: EdgeInsets.all(stepperPad),
-                      child: Icon(Icons.add, size: stepperIcon),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
+              ),
+            ],
+          ),
+        );
+      }
 
         // ── Card ───────────────────────────────────────────────────────────
         return Card(
@@ -276,7 +301,7 @@ class StoreItemCard extends StatelessWidget {
                         ),
                         if (item.oldPrice != null)
                           Text(
-                            '£${item.oldPrice!.toStringAsFixed(2)}',
+                            '${item.oldPrice!.toStringAsFixed(2)}kr',
                             style: TextStyle(
                               fontSize: fsOldPrice,
                               color: Colors.black38,
@@ -292,7 +317,7 @@ class StoreItemCard extends StatelessWidget {
                     SizedBox(height: padSmall),
 
                     // Star rating
-                    buildRating(),
+                    //buildRating(),
                   ],
                 ),
               ),
@@ -302,23 +327,23 @@ class StoreItemCard extends StatelessWidget {
 
               // ── Card Footer ────────────────────────────────────────────
               Padding(
-                padding: EdgeInsets.fromLTRB(pad * 0.7, padSmall, pad * 0.7, padSmall - 1),
+                padding: EdgeInsets.fromLTRB(pad * 0.7, padSmall, pad * 0.7, padSmall),
                 child: Row(
                   children: [
                     // Quantity stepper
-                    buildQtyStepper(),
-                    SizedBox(width: 6 * scale),
-
+                    if (item.quantity > 0) 
+                      buildQtyStepper()     
+                    else
                     // Add to cart button
                     Expanded(
                       child: Semantics(
-                        label: item.quantity > 0 ? 'In cart' : 'Add to cart',
+                        label: 'Lägg till i kundvagn',
                         button: true,
                         child: ElevatedButton.icon(
                           onPressed: () => onAddToCart(item),
                           icon: Icon(Icons.shopping_cart_outlined, size: iconSize),
                           label: Text(
-                            item.quantity > 0 ? 'In cart' : 'Add to cart',
+                            'Lägg i kundvagn',
                             style: TextStyle(fontSize: fsCartBtn),
                           ),
                           style: ElevatedButton.styleFrom(
@@ -342,37 +367,6 @@ class StoreItemCard extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-}
-// ─────────────────────────────────────────────
-// PRIVATE HELPER: Stepper button
-// ─────────────────────────────────────────────
- 
-class _StepperButton extends StatelessWidget {
-  final IconData icon;
-  final VoidCallback onTap;
-  final String semanticLabel;
- 
-  const _StepperButton({
-    required this.icon,
-    required this.onTap,
-    required this.semanticLabel,
-  });
- 
-  @override
-  Widget build(BuildContext context) {
-    return Semantics(
-      label: semanticLabel,
-      button: true,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(10),
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Icon(icon, size: 22),
-        ),
-      ),
     );
   }
 }

@@ -76,6 +76,8 @@ class FavouritesPage extends StatelessWidget {
                         stock.increaseQuantity(it),
                     onQuantityDecreased: (it) =>
                         stock.decreaseQuantity(it),
+                    onQuantityChanged: (it, qty) =>
+                        stock.updateQuantity(it, qty),
                     onAddToCart: (it) => stock.addToCart(it),
                   );
                 },
