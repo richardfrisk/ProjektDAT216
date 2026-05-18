@@ -3,6 +3,7 @@ import 'package:imat/app_theme.dart';
 import 'package:imat/model/page_handler.dart';
 import 'package:imat/model/store_item.dart';
 import 'package:imat/model/store_stock.dart';
+import 'package:imat/widgets/item_detail_dialog.dart';
 import 'package:provider/provider.dart';
 
 // ─── Category metadata ───────────────────────────────────────────────────────
@@ -24,7 +25,7 @@ const List<_CategoryInfo> _categories = [
       Color(0xFFDCFCE7)),
   _CategoryInfo('Kött & Fisk', Icons.kebab_dining_rounded, Color(0xFFEF4444),
       Color(0xFFFEE2E2)),
-  _CategoryInfo('Bakverk', Icons.breakfast_dining_rounded, Color(0xFFF97316),
+  _CategoryInfo('Bageri', Icons.breakfast_dining_rounded, Color(0xFFF97316),
       Color(0xFFFFEDD5)),
   _CategoryInfo('Skafferi', Icons.kitchen_rounded, Color(0xFF8B5CF6),
       Color(0xFFEDE9FE)),
@@ -196,8 +197,7 @@ class _DealCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>
-          context.read<PageHandler>().navigateToCategory(item.category),
+      onTap: () => showItemDetail(context, item),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,

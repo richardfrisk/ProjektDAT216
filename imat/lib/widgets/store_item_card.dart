@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imat/model/store_item.dart';
+import 'package:imat/widgets/item_detail_dialog.dart';
 
 class StoreItemCard extends StatelessWidget {
   final StoreItem item;
@@ -170,9 +171,12 @@ class StoreItemCard extends StatelessWidget {
           ),
         );
       }
+    
 
         // ── Card ───────────────────────────────────────────────────────────
-        return Card(
+        return GestureDetector(
+          onTap: () => showItemDetail(context, item),
+          child: Card(
           elevation: 2,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
@@ -365,6 +369,7 @@ class StoreItemCard extends StatelessWidget {
               ),
             ],
           ),
+        ),
         );
       },
     );

@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "v001",
-      "name": "Vine Tomatoes",
+      "name": "Tomater",
       "category": "Grönsaker",
       "weight": "500g",
       "price": 29,
@@ -34,7 +34,7 @@
     },
     {
       "id": "v003",
-      "name": "Carrots",
+      "name": "Morötter",
       "category": "Grönsaker",
       "weight": "1kg",
       "price": 10,
@@ -50,7 +50,7 @@
     },
     {
       "id": "v004",
-      "name": "Baby Spinach",
+      "name": "Spenat",
       "category": "Grönsaker",
       "weight": "200g",
       "price": 18,
@@ -66,7 +66,7 @@
     },
     {
       "id": "v005",
-      "name": "White Potatoes",
+      "name": "Mjöl potatis",
       "category": "Grönsaker",
       "weight": "2kg",
       "price": 17.5,
@@ -83,7 +83,7 @@
 
     {
       "id": "f001",
-      "name": "Bananas",
+      "name": "Bananer",
       "category": "Frukt",
       "weight": "5 pack",
       "price": 12,
@@ -99,7 +99,7 @@
     },
     {
       "id": "f002",
-      "name": "Gala Apples",
+      "name": "Gala äpplen",
       "category": "Frukt",
       "weight": "6 pack",
       "price": 20,
@@ -115,7 +115,7 @@
     },
     {
       "id": "f003",
-      "name": "Strawberries",
+      "name": "Jordgubbar",
       "category": "Frukt",
       "weight": "400g",
       "price": 35,
@@ -131,7 +131,7 @@
     },
     {
       "id": "f004",
-      "name": "Seedless Grapes",
+      "name": "Vindruvor",
       "category": "Frukt",
       "weight": "500g",
       "price": 25,
@@ -147,7 +147,7 @@
     },
     {
       "id": "f005",
-      "name": "Blueberries",
+      "name": "Blåbär",
       "category": "Frukt",
       "weight": "150g",
       "price": 23,
@@ -164,7 +164,7 @@
 
     {
       "id": "d001",
-      "name": "Full Fat Milk",
+      "name": "Röd Mjölk",
       "category": "Mejeri",
       "weight": "2 litres",
       "price": 15,
@@ -180,7 +180,7 @@
     },
     {
       "id": "d002",
-      "name": "Greek Yoghurt",
+      "name": "Grekisk Yoghurt",
       "category": "Mejeri",
       "weight": "500g",
       "price": 25,
@@ -196,7 +196,7 @@
     },
     {
       "id": "d003",
-      "name": "Cheddar Cheese",
+      "name": "Cheddarost",
       "category": "Mejeri",
       "weight": "400g",
       "price": 30,
@@ -212,7 +212,7 @@
     },
     {
       "id": "d004",
-      "name": "Free Range Eggs",
+      "name": "Ägg",
       "category": "Mejeri",
       "weight": "12 pack",
       "price": 33,
@@ -228,7 +228,7 @@
     },
     {
       "id": "d005",
-      "name": "Salted Butter",
+      "name": "Extra saltad smör",
       "category": "Mejeri",
       "weight": "250g",
       "price": 18,
@@ -245,7 +245,7 @@
 
     {
       "id": "b001",
-      "name": "Sourdough Loaf",
+      "name": "Surdegsbröd",
       "category": "Bakverk",
       "weight": "800g",
       "price": 34,
@@ -261,7 +261,7 @@
     },
     {
       "id": "b002",
-      "name": "Wholemeal Bread",
+      "name": "Fullkornsbröd",
       "category": "Bakverk",
       "weight": "800g",
       "price": 14,
@@ -277,7 +277,7 @@
     },
     {
       "id": "b003",
-      "name": "Croissants",
+      "name": "Croissanter",
       "category": "Bakverk",
       "weight": "4 pack",
       "price": 27.5,
@@ -294,7 +294,7 @@
 
     {
       "id": "m001",
-      "name": "Chicken Breast",
+      "name": "Kycklingbröst",
       "category": "Kött & Fisk",
       "weight": "600g",
       "price": 40,
@@ -310,7 +310,7 @@
     },
     {
       "id": "m002",
-      "name": "Salmon Fillets",
+      "name": "Laxfilé",
       "category": "Kött & Fisk",
       "weight": "400g",
       "price": 60,
@@ -326,7 +326,7 @@
     },
     {
       "id": "m003",
-      "name": "Beef Mince",
+      "name": "Köttfärs",
       "category": "Kött & Fisk",
       "weight": "500g",
       "price": 40,
@@ -359,7 +359,7 @@
     },
     {
       "id": "p002",
-      "name": "Basmati Rice",
+      "name": "Basmati Ris",
       "category": "Skafferi",
       "weight": "1kg",
       "price": 17.5,
@@ -375,7 +375,7 @@
     },
     {
       "id": "p003",
-      "name": "Olive Oil",
+      "name": "Oliv olja",
       "category": "Skafferi",
       "weight": "500ml",
       "price": 45,
@@ -391,7 +391,7 @@
     },
     {
       "id": "p004",
-      "name": "Chopped Tomatoes",
+      "name": "Hackade Tomater",
       "category": "Skafferi",
       "weight": "400g",
       "price": 8,
@@ -408,7 +408,7 @@
 
     {
       "id": "dr001",
-      "name": "Orange Juice",
+      "name": "Apelsinjuice",
       "category": "Dryck",
       "weight": "1 litre",
       "price": 25,
@@ -424,7 +424,7 @@
     },
     {
       "id": "dr002",
-      "name": "Sparkling Water",
+      "name": "Bubbelvatten",
       "category": "Dryck",
       "weight": "1.5 litres",
       "price": 12,
@@ -440,7 +440,7 @@
     },
     {
       "id": "dr003",
-      "name": "Chamomile Tea",
+      "name": "Chamomile Te",
       "category": "Dryck",
       "weight": "20 bags",
       "price": 23,
